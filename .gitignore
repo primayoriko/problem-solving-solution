@@ -2,4 +2,8 @@
 *.code-workspace
 *.elf
 *.Ink
+*.o
+*.jpg
+*.png
 m
+.vscode/
