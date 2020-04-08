@@ -1,6 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Fenwick Tree for searching queries, 
+// where each query find number of element in 
+// subarray[L..R] which less or same with k
+
 const int MAX = 1e5+8;
 int bit[MAX];
 
@@ -51,23 +55,4 @@ void ansQuery(ArrElmt arr[], int n, Query queries[], int q){
         cout<<ans[i]<<' ';
     }
     cout<<endl;
-}
-
-int main(){
-    int n;
-    cin>>n;
-    ArrElmt arr[n];
-    Query queries[n];
-    for(int i=0;i<n;i++){
-        cin>>arr[i].val;
-        arr[i].idx = i;
-        queries[i].l = 0;
-        queries[i].r = i-1;
-        queries[i].x = arr[i].val;
-        queries[i].idx = i;
-    }
-
-    ansQuery(arr, n, queries, n);
-    
-    return 0;
 }
