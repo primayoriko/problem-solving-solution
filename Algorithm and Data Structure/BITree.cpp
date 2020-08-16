@@ -1,9 +1,9 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 // Fenwick Tree for searching queries, 
 // where each query find number of element in 
 // subarray[L..R] which less or same with k
+
+#include <bits/stdc++.h>
+using namespace std;
 
 const int MAX = 1e5+8;
 int bit[MAX];

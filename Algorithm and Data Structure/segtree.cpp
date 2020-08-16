@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
 const int MAX = 1e3+5;
 long tree[4*MAX], treeMax[4*MAX];
 
@@ -60,4 +61,35 @@ void update(int v, int tl, int tr, int pos, int nVal){
         tree[v] = tree[v*2] + tree[v*2+1];
         treeMax[v] = max(treeMax[v*2], treeMax[v*2+1]);  
     }
+}
+
+int main(){
+    int n, q;
+    cin>>n;
+    int arr[n+1];
+    for(int i=1;i<=n;i++){
+        cin>>arr[i];
+    }
+    build(arr, 1, 1, n);
+    // for(int i=1;i<=4*n;i++){
+    //     cout<<i<<' '<<treeMax[i]<<endl;
+    // }
+    cin>>q;
+    for(int i=0;i<q;i++){
+        int a, l, r;
+        cin>>a;
+        if(a==1){
+            cin>>l;
+            update(1, 1, n, l, arr[l]+1);
+            // for(int j=1;j<=4*n;j++){
+            //     cout<<j<<' '<<tree[j]<<endl;
+            // }
+        }
+        else{
+            cin>>l>>r;
+            cout<<maks(1, 1, n, l, r)<<' '<<sum(1, 1, n, l, r)<<endl;
+        }
+            
+    }
+    return 0;
 }

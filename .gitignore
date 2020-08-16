@@ -5,5 +5,8 @@
 *.o
 *.jpg
 *.png
+*.zip
+*.pdf
 m
 .vscode/
+cp-hasan/

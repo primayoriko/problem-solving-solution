@@ -1,3 +1,4 @@
+// Matrix's Exponentiation for Fibonacci Number
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -33,4 +34,22 @@ long fib(long n){
     }
     power(F, n-1);
     return F[0][0];
+}
+
+
+int main(){
+    long n, q;
+    cin>>n>>q;
+
+    for(long i=0;i<q;i++){
+        long num;
+        cin>>num;
+        cout<<fib(num+1)<<endl;
+    }
+    // for(long i=1;i<=10;i++){
+    //     // long num;
+    //     // cin>>num;
+    //     cout<<fib(i+1)<<endl;
+    // }
+    return 0;
 }
